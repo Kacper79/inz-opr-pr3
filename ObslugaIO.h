@@ -15,10 +15,10 @@ enum class NAZWA_TABEL {
 inline std::string UzyskajNazweTabeli(NAZWA_TABEL nazwaTabeli) {
 	switch (nazwaTabeli) {
 		case NAZWA_TABEL::KLIENCI:
-			return "F:\\inf\\INWarsztat\\Debug\\klienci.txt";
+			return "C:\\Users\\123627\\source\\repos\\INWarsztat\\INWarsztat\\Debug\\klienci.txt";
 		break;
 		case NAZWA_TABEL::ZGLOSZENIA:
-			return "F:\\inf\\INWarsztat\\Debug\\zgloszenia.txt";
+			return "C:\\Users\\123627\\source\\repos\\INWarsztat\\INWarsztat\\Debug\\zgloszenia.txt";
 		break;
 		/*case NAZWA_TABEL::WYCENA:
 			return "F:\\inf\\INWarsztat\\Debug\\wycena.txt";

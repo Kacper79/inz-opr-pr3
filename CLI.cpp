@@ -145,8 +145,8 @@ void CLI::DodajDaneSerwisoweUI() {
 	if (ObecneZgloszenie->ZwrocFormeZgloszenia() == FORMA_SERWISU::OKRESOWY_PRZEGLAD) {
 		char znak;
 		bool przeszedl;
-		std::cout << "Czy przeszdl przeglad(t/n): ";
 		while (true) {
+			std::cout << "Czy przeszdl przeglad(t/n): ";
 			if (wprowadzZmienna(znak)) {
 				if (znak == 't') {
 					przeszedl = true;
@@ -181,9 +181,10 @@ void CLI::DodajDaneSerwisoweUI() {
 		konZgloszenia->DodajDaneSerwisowe(ObecneZgloszenie,usterki, false);
 	}
 
-	std::cout << "Podaj cene uslugi do faktury/rachunku: ";
+	
 	int cena;
 	while (true) {
+		std::cout << "Podaj cene uslugi do faktury/rachunku: ";
 		if (wprowadzZmienna(cena)) {
 			if (cena <= 0) {
 				printf("To nie jest poprawna cena\n");
@@ -214,21 +215,22 @@ void CLI::FinalizacjaSerwisuUI() {
 	konZgloszenia->UstalTerminSpotkania(ObecneZgloszenie,dataPrzyjscia);
 	Sleep(3000);
 
-	std::cout << "Czy usunac zgloszenie(domyslnie - tak, wpisz t lub n): ";
+	
 	char usunCh;
 	while (true) {
+		std::cout << "Czy usunac zgloszenie(domyslnie - tak, wpisz t lub n): ";
 		if (wprowadzZmienna(usunCh)) {
 			if (usunCh == 't' || usunCh == 'n') {
 				break;
 			}
 			else {
 				printf("To nie jest poprawna opcja\n");
-				CzyscBuforWejscia();
+				//CzyscBuforWejscia();
 			}
 		}
 		else {
 			printf("To nie jest znak opcji\n");
-			CzyscBuforWejscia();
+			//CzyscBuforWejscia();
 		}
 	}
 	if (usunCh == 't') konZgloszenia->UsunZgloszenie(ObecneZgloszenie);
